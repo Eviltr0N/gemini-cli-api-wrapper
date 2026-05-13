@@ -1,0 +1,63 @@
+{
+  "name": "gemini-cli-api-wrapper",
+  "version": "0.1.0",
+  "description": "Local REST API server wrapping @google/gemini-cli-core with OpenAI-compatible endpoints. Use Gemini models with any OpenAI client — no API key needed.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "gemini-cli-api-wrapper": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eviltr0N/gemini-cli-api-wrapper.git"
+  },
+  "homepage": "https://github.com/Eviltr0N/gemini-cli-api-wrapper#readme",
+  "bugs": {
+    "url": "https://github.com/Eviltr0N/gemini-cli-api-wrapper/issues"
+  },
+  "author": "eviltr0n",
+  "license": "Apache-2.0",
+  "keywords": [
+    "gemini",
+    "google",
+    "openai",
+    "api",
+    "rest",
+    "wrapper",
+    "llm",
+    "ai",
+    "langchain",
+    "genai",
+    "cli",
+    "proxy",
+    "gemini-cli"
+  ],
+  "dependencies": {
+    "@google/gemini-cli-core": "^0.40.0-nightly",
+    "hono": "^4.7.0",
+    "@hono/node-server": "^1.14.0",
+    "@hono/swagger-ui": "^0.5.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "tsx": "^4.19.0",
+    "@types/node": "^22.0.0",
+    "@types/uuid": "^10.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
